@@ -35,8 +35,9 @@ let primaryColor = "#FFFFFF";
 let bgColorInput, primaryColorInput;
 
 function preload() {
-  img = loadImage("/assets/pepper.JPG");
-  resizeAndCropImage();
+  img = loadImage("Radial_halftone_raster/assets/pepper.JPG", resizeAndCropImage, () => {
+    console.error("Error loading image: Radial_halftone_raster/assets/pepper.JPG not found");
+  });
 }
 
 function setup() {
