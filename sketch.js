@@ -35,7 +35,7 @@ let primaryColor = "#FFFFFF";
 let bgColorInput, primaryColorInput;
 
 function preload() {
-  img = loadImage("/assets/run.png", resizeAndCropImage, () => {
+  img = loadImage("assets/run.png", resizeAndCropImage, () => {
     console.error("Error loading image");
   });
 }
