@@ -317,8 +317,8 @@ function handleFile(file) {
   }
 }
 
-function resizeAndCropImage(image, canvasWidth, canvasHeight) {
-  const imgAspectRatio = img.width / img.height;
+function resizeAndCropImage(image) {
+  const imgAspectRatio = image.width / image.height;
   const canvasAspectRatio = canvasWidth / canvasHeight;
 
   let newWidth, newHeight;
@@ -331,10 +331,12 @@ function resizeAndCropImage(image, canvasWidth, canvasHeight) {
   }
 
   const resizedImage = createImage(newWidth, newHeight);
-  resizedImage.copy(image, 0, 0, img.width, img.height, 0, 0, newWidth, newHeight);
+  resizedImage.copy(image, 0, 0, image.width, image.height, 0, 0, newWidth, newHeight);
 
   const croppedImage = createImage(canvasWidth, canvasHeight);
   croppedImage.copy(resizedImage, (newWidth - canvasWidth) / 2, (newHeight - canvasHeight) / 2, canvasWidth, canvasHeight, 0, 0, canvasWidth, canvasHeight);
 
-  return croppedImage;
+  img = croppedImage;
+  img.loadPixels();
+  loop();
 }
