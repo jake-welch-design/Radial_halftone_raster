@@ -210,6 +210,9 @@ function createColorGUI(labelText, defaultValue, inputCallback, parentContainer)
   label.style("margin", "0");
 
   const input = createInput(defaultValue, "color").parent(container);
+  input.style("margin", "0 10px");
+  input.size(60);
+  input.attribute("type", "color");
   input.input(inputCallback);
 
   return { input };
