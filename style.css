@@ -38,6 +38,18 @@ input[type="number"]{
   border: 1px;
 }
 
+input[type="color"]{
+  background: rgba(255, 255, 255, 0.175);
+  color: white;
+  font-family: 'Satoshi', Arial, sans-serif; 
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01em;
+  border: 1px;
+}
+
 .row{
   display:flex;
   gap: 2px;
