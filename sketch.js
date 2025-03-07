@@ -35,7 +35,7 @@ let primaryColor = "#FFFFFF";
 let bgColorInput, primaryColorInput;
 
 function preload() {
-  img = loadImage("/assets/pepper.JPG");
+  img = loadImage("Radial_halftone_raster/assets/pepper.JPG");
   resizeAndCropImage();
 }
 
